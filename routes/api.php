@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Task;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaskController;
+use App\Http\Controllers\TaskCategoriesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/task', [Task::class, 'index']);
-
-Route::get('/test', function () {
-    return ('welcome');
-});
+Route::get('/Task', [TaskController::class, 'index']);
+Route::get('/TaskCategories', [TaskCategoriesController::class, 'index']);

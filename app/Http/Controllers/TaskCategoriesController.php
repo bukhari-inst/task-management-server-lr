@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Task;
+use App\Models\TaskCetegories;
 
 use Illuminate\Http\Request;
 
-class TaskController extends Controller
+class TaskCategoriesController extends Controller
 {
     protected $task;
     public function __construct()
     {
-        $this->task = new Task();
+        $this->task = new TaskCetegories();
     }
     public function index()
     {

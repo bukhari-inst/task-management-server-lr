@@ -9,6 +9,8 @@ class TaskCetegories extends Model
 {
     use HasFactory;
 
+    protected $table = 'task_categories';
+
     protected $fillable = [
         'id', 'name'
     ];
