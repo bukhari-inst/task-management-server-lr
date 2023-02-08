@@ -2,21 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\TaskCetegories;
+use App\Models\Category;
 
 use Illuminate\Http\Request;
 
 class TaskCategoriesController extends Controller
 {
-    protected $task;
+    protected $category;
     public function __construct()
     {
-        $this->task = new TaskCetegories();
+        $this->category = new Category();
     }
     public function index()
     {
-        $task = $this->task->all();
+        $category = $this->category->all();
 
-        return response()->json($task);
+        return response()->json($category);
     }
 }

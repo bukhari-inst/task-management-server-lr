@@ -5,13 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TaskCetegories extends Model
+class Category extends Model
 {
     use HasFactory;
 
-    protected $table = 'task_categories';
-
     protected $fillable = [
-        'id', 'name'
+        'id', 'name', 'created_at', 'updated_at'
     ];
 }
