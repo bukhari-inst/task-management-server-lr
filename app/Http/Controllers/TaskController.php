@@ -13,6 +13,7 @@ class TaskController extends Controller
     {
         $this->task = new Task();
     }
+
     public function index()
     {
         $task = $this->task->all();
