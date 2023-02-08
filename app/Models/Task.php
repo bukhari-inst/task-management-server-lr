@@ -12,6 +12,6 @@ class Task extends Model
     protected $table = 'task';
 
     protected $fillable = [
-        'id', 'cetegory_id', 'title', 'description', 'start_date', 'finish_date', 'status'
+        'id', 'cetegory_id', 'title', 'description', 'startdate', 'finishdate', 'status'
     ];
 }
