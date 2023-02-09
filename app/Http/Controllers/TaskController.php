@@ -36,7 +36,7 @@ class TaskController extends Controller
         $tasks = Task::findOrFail($id);
 
         $data = [];
-        $data[] = [
+        $data = [
             "id" => $tasks->id,
             "category_id" => $tasks->Category->id,
             "category" => $tasks->Category->name,
