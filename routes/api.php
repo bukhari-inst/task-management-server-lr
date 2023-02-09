@@ -20,5 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/Task', [TaskController::class, 'index']);
 Route::get('/TaskCategories', [TaskCategoriesController::class, 'index']);
+Route::get('/TaskCategories/{id}', [TaskCategoriesController::class, 'show']);
+Route::get('/Task', [TaskController::class, 'index']);

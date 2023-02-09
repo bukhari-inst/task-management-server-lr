@@ -8,14 +8,17 @@ use Illuminate\Http\Request;
 
 class TaskCategoriesController extends Controller
 {
-    protected $category;
-    public function __construct()
-    {
-        $this->category = new Category();
-    }
+
     public function index()
     {
-        $category = $this->category->all();
+        $category = Category::all();
+
+        return response()->json($category);
+    }
+
+    public function show($id = false)
+    {
+        $category = Category::findOrFail($id);
 
         return response()->json($category);
     }
