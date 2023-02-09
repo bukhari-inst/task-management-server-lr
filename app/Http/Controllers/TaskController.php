@@ -19,8 +19,8 @@ class TaskController extends Controller
         foreach ($tasks as $task) {
             $data[] = [
                 "id" => $task->id,
-                "Task_id" => $task->Category->id,
-                "Task" => $task->Category->name,
+                "category_id" => $task->Category->id,
+                "category" => $task->Category->name,
                 "title" => $task->title,
                 "description" => $task->description,
                 "startdate" => $task->startdate,
@@ -38,8 +38,8 @@ class TaskController extends Controller
         $data = [];
         $data[] = [
             "id" => $tasks->id,
-            "Task_id" => $tasks->Category->id,
-            "Task" => $tasks->Category->name,
+            "category_id" => $tasks->Category->id,
+            "category" => $tasks->Category->name,
             "title" => $tasks->title,
             "description" => $tasks->description,
             "startdate" => $tasks->startdate,
