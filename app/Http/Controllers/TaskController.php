@@ -28,4 +28,23 @@ class TaskController extends Controller
         }
         return response()->json($data);
     }
+
+    public function show($id = false)
+    {
+        $tasks = Task::findOrFail($id);
+
+        $data = [];
+        $data[] = [
+            "id" => $tasks->id,
+            "category_id" => $tasks->category->id,
+            "category" => $tasks->category->name,
+            "title" => $tasks->title,
+            "description" => $tasks->description,
+            "startdate" => $tasks->startdate,
+            "finishdate" => $tasks->finishdate,
+            "status" => $tasks->status,
+        ];
+
+        return response()->json($data);
+    }
 }
